@@ -18,5 +18,19 @@ process_status=$(ps -p "$process_pid" -o stat)
 
 process_path=$(readlink -f "/proc/$process_pid/exe")
 
+echo "El nombre del proceso es: $process_name"
 
+echo "El ID del proceso es: $process_id"
+
+echo "El Parent Process ID es: $process_parent"
+
+echo "El propietario del proceso es: $process_user"
+
+echo "El consumo de CPU es de: $process_CPU"
+
+echo "El consumo en memoria es: $process_memo"
+
+echo "El estado del proceso es: $process_status"
+
+echo "El path del ejecutable es: $process_path"
 

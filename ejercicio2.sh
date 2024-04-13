@@ -17,7 +17,7 @@ while True; do
         $command &
     fi 
 
-    slepp 10
+    sleep 10
 
 done 
 

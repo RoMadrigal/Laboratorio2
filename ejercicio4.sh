@@ -10,19 +10,4 @@ inotifywait -m -r -e create,modify,delete "$directorio" |
     done 
 
 
-[Unit]
-Description=Servicio de Monitoreo de Cambios en Directorios
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/home/rodrigo/Scripts/ejercicio4.sh
-WorkingDirectory=/home/rodrigo/Tareas
-Restart=always
-
-[Install]
-WantedBy=multi.user.target
-
-
-
 

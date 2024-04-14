@@ -25,3 +25,33 @@ while ps -p "$exepid" >/dev/null; do
 done 
 
 
+gnuplot << EOF 
+
+set terminal png
+
+set output "grafica_$ejecutable.png"
+
+set xlabel "Tiempo"
+
+set ylabel "Consumo"
+
+set title "Grafica de CPU y Memoria de $ejecutable"
+
+plot "$registro" using 1:2 with lines title "CPU", \
+     
+     "$registro" using 1:3 with lines title "Memoria" 
+EOF
+
+echo "Se ha generado la grafica: grafica_$ejecutable.png"
+
+
+
+
+
+
+
+
+
+
+
+

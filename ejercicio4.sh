@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directorio="/home/rodrigo"
+directorio="/home/rodrigo/Tareas"
 
 inotifywait -m -r -e create,modify,delete "$directorio" |
 
@@ -17,7 +17,7 @@ After=network.target
 [Service]
 Type=simple
 ExecStart=/home/rodrigo/Scripts/ejercicio4.sh
-WorkingDirectory=/home/rodrigo
+WorkingDirectory=/home/rodrigo/Tareas
 Restart=always
 
 [Install]
